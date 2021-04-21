@@ -1,4 +1,4 @@
-## Analysis-functionality to be tested(Kindly refer the document "Flow of the implemntation" in order to understand the system flow which needs to be tested)
+## Analysis-functionality to be tested(Kindly refer the document "Flow of the implementation" in order to understand the system flow which needs to be tested)
 
 This section lists the Analysis for which _tests_ must be written.
 
@@ -41,13 +41,10 @@ Computation of maximum      |     Yes       | This is part of the software being
 Off-the-shelf PDF converter |     Yes       | Data should be read from .csv file, analytics needs to be performed and stored in PDF format in the server
 Counting the breaches       |     Yes       | When battery parameters exceeds their threshold values it needs to be accounted as a breach
 Detecting trends            |     Yes       | Whenever the reading is increasing continuously for 30 mins date and time needs to be recorded
-Notification utility        |     Yes       | When PDF report is generated recipient needs to be informed
+Notification utility        |     Yes       | When PDF report is generated recipient should be notified
 
-### List the Test Cases
+### Test Cases
 
-Write tests in the form of `<expected output or action>` from `<input>` / when `<event>`
-
-Add to these tests:
 
 1. Write minimum and maximum to the PDF from a .csv file containing positive and negative readings.
 2. If there are no breaches then the default count of breaches should be returned which is equivalent to '0'(zero).
@@ -65,7 +62,7 @@ Add to these tests:
 14. Check if there is any limit on the size of the file(in terms of no. of bytes) or if excess of data causes stack overflow.
 15. Alert/Notification system should be configured and tested with 'dummy' input.
 
-**NOTE: Manual regarding the functioning of the system should be available(**Flow of the implemntation.docx**)**
+**NOTE: Manual regarding the functioning of the system should be available(**Flow of the implementation.docx**)**
 
 ### Recognize Fakes and Reality
 
