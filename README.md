@@ -1,4 +1,6 @@
-## Analysis-functionality to be tested(Kindly refer the document "Flow of the implementation" in order to understand the system flow which needs to be tested)
+## Analysis-functionality to be tested
+
+:) Kindly refer the document "Flow of the implementation.docx" in order to understand the system flow which needs to be tested :)
 
 This section lists the Analysis for which _tests_ must be written.
 
