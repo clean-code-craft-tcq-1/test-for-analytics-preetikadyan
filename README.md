@@ -1,6 +1,8 @@
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## Analysis-functionality to be tested
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-**:) Kindly refer the document "Flow of the implementation.docx" in order to understand the system flow which needs to be tested :) **
+** :) Kindly refer the document "Flow of the implementation.docx" in order to understand the system flow which needs to be tested :) **
 
 This section lists the Analysis for which _tests_ must be written.
 
@@ -19,9 +21,11 @@ Data for a month is stored in a [csv file](https://en.wikipedia.org/wiki/Comma-s
 1. PDF report of the analysis must be stored every week.
 2. Notification must be sent when a new report is available.
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## Tasks
-
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### List Dependencies
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 List the dependencies of the Analysis-functionality.
 
@@ -31,13 +35,14 @@ List the dependencies of the Analysis-functionality.
 4. PDF utility should be supported.
 5. Alert/Notification system should be known(e.g: if it's EMAIL_ALERT, CONTOLLER_ALERT or simply a CONSOLE_ALERT)
 
-
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### Mark the System Boundary
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 What is included in the software unit-test? What is not? Fill this table.
 
 | Item                      | Included?     | Reasoning / Assumption
-|---------------------------|---------------|---
+|---------------------------|---------------|---------------------------------
 Battery Data-accuracy       |     No        | We do not test the accuracy of data
 Computation of maximum      |     Yes       | This is part of the software being developed
 Off-the-shelf PDF converter |     Yes       | Data should be read from .csv file, analytics needs to be performed and stored in PDF format in the server
@@ -45,8 +50,10 @@ Counting the breaches       |     Yes       | When battery parameters exceeds th
 Detecting trends            |     Yes       | Whenever the reading is increasing continuously for 30 mins date and time needs to be recorded
 Notification utility        |     Yes       | When PDF report is generated recipient should be notified
 
-### Test Cases
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Test Cases
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 1. Write minimum and maximum to the PDF from a .csv file containing positive and negative readings.
 2. If there are no breaches then the default count of breaches should be returned which is equivalent to '0'(zero).
@@ -64,9 +71,13 @@ Notification utility        |     Yes       | When PDF report is generated recip
 14. Check if there is any limit on the size of the file(in terms of no. of bytes) or if excess of data causes stack overflow.
 15. Alert/Notification system should be configured and tested with 'dummy' input.
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 **NOTE: Manual regarding the functioning of the system should be available(**Flow of the implementation.docx**)**
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### Recognize Fakes and Reality
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Consider the tests for each functionality below.
 In those tests, identify inputs and outputs.
