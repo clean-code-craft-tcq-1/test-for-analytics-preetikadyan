@@ -2,7 +2,7 @@
 
 This section lists the Analysis for which _tests_ must be written.
 
-**INPUT:**
+**INPUT**
 Battery Telemetrics are collected and stored on a server.
 Data for a month is stored in a [csv file](https://en.wikipedia.org/wiki/Comma-separated_values).
 
