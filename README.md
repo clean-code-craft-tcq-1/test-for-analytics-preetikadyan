@@ -35,9 +35,10 @@ List the dependencies of the Analysis-functionality.
 
 1. Access to the Server containing the telemetrics in a csv file.
 2. Read access for the csv file in order to perform the analytics.
-3. Threshold values for the battery parameters should be available in order to calculate the no. of breaches.
-4. PDF utility should be supported.
-5. Alert/Notification system should be known(e.g: if it's EMAIL_ALERT, CONTROLLER_ALERT or simply a CONSOLE_ALERT)
+3. Write access to the server to generate/store the PDF report.
+4. Threshold values for the battery parameters should be available in order to calculate the no. of breaches.
+5. PDF utility should be supported.
+6. Alert/Notification system should be known or configured(e.g: if it's EMAIL_ALERT, CONTROLLER_ALERT or simply a CONSOLE_ALERT)
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### Mark the System Boundary
@@ -63,7 +64,7 @@ Notification utility        |     Yes       | When PDF report is generated recip
 2. If there are no breaches then the default count of breaches should be returned which is equivalent to '0'(zero).
 3. I/P file should be of .csv format. No other format I/P file should be allowed. If I/P format is other than .csv then it should return "Invalid I/P file format".
 4. Write "Invalid input" to the PDF when the .csv doesn't contain expected data.
-5. Battery telemetrics file(.csv file) should be available on the server. If not then the recipient should get a notification that the file doesn't exist follwed by immediate    fetching of the .csv from the local server.
+5. Battery telemetrics file(.csv file) should be available on the server. If not then the recipient should get a notification that the "file doesn't exist" follwed by immediate fetching of the .csv from the local server.
 6. All the mandatory fields and columns must be checked on which analystics to be performed(i.e., name of the coulmns,their sequence and no. of columns in the .csv file should be same throughout the monthly files). If not then it should specify the file name having invalid format(e.g: 'Mar.csv has invalid format').
 7. Duplicate entries should not be allowed to avoid inaccuracy in the analysis generated. If exists then it should be deleted automatically.
 8. Check if all the analytics is performed or not(min,max, count of breaches and trends). If not then specify the missing analytics.
