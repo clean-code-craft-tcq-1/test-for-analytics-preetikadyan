@@ -51,8 +51,8 @@ What is included in the software unit-test? What is not? Fill this table.
 Battery Data-accuracy       |     No        | We do not test the accuracy of data
 Computation of maximum      |     Yes       | This is part of the software being developed
 Off-the-shelf PDF converter |     Yes       | Data should be read from .csv file, analytics needs to be performed and stored in PDF format in the server
-Counting the breaches       |     Yes       | When battery parameters exceeds their threshold values it needs to be accounted as a breach
-Detecting trends            |     Yes       | Whenever the reading is increasing continuously for 30 mins date and time needs to be recorded
+Counting the breaches       |     Yes       | When battery parameters exceeds their threshold values it needs to be counted as a breach
+Detecting trends            |     Yes       | Whenever the reading is increasing continuously for 30 mins date,time & Reading needs to be recorded
 Notification utility        |     Yes       | When PDF report is generated recipient should be notified
 
 
@@ -64,17 +64,19 @@ Notification utility        |     Yes       | When PDF report is generated recip
 2. If there are no breaches then the default count of breaches should be returned which is equivalent to '0'(zero).
 3. I/P file should be of .csv format. No other format I/P file should be allowed. If I/P format is other than .csv then it should return "Invalid I/P file format".
 4. Write "Invalid input" to the PDF when the .csv doesn't contain expected data.
-5. Battery telemetrics file(.csv file) should be available on the server. If not then the recipient should get a notification that the "file doesn't exist" follwed by immediate fetching of the .csv from the local server.
+5. Battery telemetrics file(.csv file) should be available on the server. If not then the recipient should get a notification that the "file doesn't exist" followed by immediate fetching of the .csv from the local server.
 6. All the mandatory fields and columns must be checked on which analystics to be performed(i.e., name of the coulmns,their sequence and no. of columns in the .csv file should be same throughout the monthly files). If not then it should specify the file name having invalid format(e.g: 'Mar.csv has invalid format').
 7. Duplicate entries should not be allowed to avoid inaccuracy in the analysis generated. If exists then it should be deleted automatically.
 8. Check if all the analytics is performed or not(min,max, count of breaches and trends). If not then specify the missing analytics.
 9. Check if PDF is generated and stored on weekly basis in the server. If not notify the registered id.
 10. Check if the recipient to whom the notification is to be sent is configured or not. if not then ask user to mention the recipient.
 11. Check if we have the utility to send notification to the registered recipient.
-12. Check if .csv's are generated and stored on monthly basis or not. If not then alert should be sent to default registered id stating that 'week1.pdf' is missing.
+12. Check if .csv's are generated and stored on monthly basis or not. If not then alert should be sent to default registered id stating that 'week1.pdf for month.csv' is missing.
 13. Check if data exist specific to the month in the I/P **MONTH_NAME.csv** file e.g: In the March.csv file we should not have an entry of februrary(Date validation should be done on the basis of date and the month of the .csv file). If such entry exist then it should not be allowed and user must be informed.
-14. Check if there is any limit on the size of the file(in terms of no. of bytes) or if excess of data causes stack overflow.
-15. Alert/Notification system should be configured and tested with 'dummy' input.
+14. Write the trend details(Date, Time & Reading) to PDF if value changes continuously for 30 mins.
+15. If no value shows the trend then it should assign "Null" to Date, Time and Reading.
+16. Check if there is any limit on the size of the file(in terms of no. of bytes) or if excess of data causes stack overflow.
+17. Alert/Notification system should be configured. If not then it should return a value stating "Notfication system is not configured". If configured sends the notification and return "Notification sent".
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 **NOTE: Manual regarding the functioning of the system should be available(**Flow of the implementation.docx**)**
