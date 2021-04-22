@@ -2,7 +2,7 @@
 ## Analysis-functionality to be tested
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-** :) Kindly refer the document "Flow of the implementation.docx" in order to understand the system flow which needs to be tested :) **
+**Kindly refer the document "Flow of the implementation.docx" in order to understand the system flow which needs to be tested**
 
 This section lists the Analysis for which _tests_ must be written.
 
@@ -37,7 +37,7 @@ List the dependencies of the Analysis-functionality.
 2. Read access for the csv file in order to perform the analytics.
 3. Threshold values for the battery parameters should be available in order to calculate the no. of breaches.
 4. PDF utility should be supported.
-5. Alert/Notification system should be known(e.g: if it's EMAIL_ALERT, CONTOLLER_ALERT or simply a CONSOLE_ALERT)
+5. Alert/Notification system should be known(e.g: if it's EMAIL_ALERT, CONTROLLER_ALERT or simply a CONSOLE_ALERT)
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### Mark the System Boundary
